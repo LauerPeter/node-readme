@@ -4,7 +4,9 @@ const fs = require("fs");
 //inquirer 
 const inquirer = require("inquirer");
 
+//grabs the readme template
 
+const readmeTemplate = require("./readmeTemplate")
 //prompt questions
 
 inquirer
@@ -71,22 +73,4 @@ inquirer
     },
   ])
 
-  ///saving the user responses 
-  .then((userResponses) => {
-    const {
-      projectName,
-      description,
-      usage,
-      contribution,
-      userInstructions,
-      testInstruction,
-      github,
-      email,
-      license,
-    } = userResponses;
-  })
-  
-  
-  
-  
   
