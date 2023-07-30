@@ -6,7 +6,8 @@ const inquirer = require("inquirer");
 
 //grabs the readme template
 
-const readmeTemplate = require("./readmeTemplate")
+const generateReadme = require("./readmeTemplate");
+
 //prompt questions
 
 inquirer
@@ -73,4 +74,18 @@ inquirer
     },
   ])
 
-  
+  .then((userResponses) => {
+    
+    const readmeTemplate = generateReadme(userResponses);
+
+    fs.writeFile("README.md", readmeTemplate, (err) => {
+      if (err) {
+        console.error("Error writing README file:", err);
+      } else {
+        console.log("README file successfully created!");
+      }
+    });
+  })
+  .catch((error) => {
+    console.error("An unexpected error occurred:", error);
+  });
