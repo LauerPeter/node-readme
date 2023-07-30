@@ -20,7 +20,9 @@ const generateReadme = (userResponses) => {
 
   ##  ${projectName}
 
-  ## Description ${description}
+  ## Description 
+  
+  ${description}
   
   ## Table of Contents
   - [Installation](#installation)
@@ -31,19 +33,33 @@ const generateReadme = (userResponses) => {
   - [GitHub](#github)
   - [Email](#email)
   
-  ## Installation ${userInstructions}
+  ## Installation:
   
-  ## Usage ${usage}
+  ${userInstructions}
   
-  ## License ${license}
+  ## Usage:
   
-  ## Contributing ${contribution}
+  ${usage}
   
-  ## Tests ${testInstruction}
+  ## License:
   
-  ## GitHub ${github}
+  ${license}
   
-  ## Email ${email}
+  ## Contributing:
+  
+  ${contribution}
+  
+  ## Tests:
+  
+  ${testInstruction}
+  
+  ## GitHub:
+  
+  ${github}
+  
+  ## Email:
+  
+  ${email}
   `;
 };
 ////exports the template 
