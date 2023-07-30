@@ -38,4 +38,5 @@ N/A
 
 ## photo
 
+![README md - bootcamp - Visual Studio Code 7_30_2023 1_52_05 PM](https://github.com/LauerPeter/node-readme/assets/135652706/931dfdb3-d0d1-4332-8547-4505af4611ce)
 
