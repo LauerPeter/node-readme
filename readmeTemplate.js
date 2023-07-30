@@ -1,4 +1,5 @@
 const generateReadme = (userResponses) => {
+  //const to set user responses
   const {
     projectName,
     description,
@@ -11,7 +12,10 @@ const generateReadme = (userResponses) => {
     license,
   } = userResponses;
 
+
+  ///cant comment below return for somereason.... read me template below
   return `
+
 
 
   ##  ${projectName}
@@ -42,5 +46,5 @@ const generateReadme = (userResponses) => {
   ## Email ${email}
   `;
 };
-
+////exports the template 
 module.exports = generateReadme;
