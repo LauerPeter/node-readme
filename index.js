@@ -87,7 +87,7 @@ inquirer
     
     const readmeTemplate = generateReadme(userResponses);
     ///creates a reamme file from the template on the other file
-    fs.writeFile("README.md", readmeTemplate, (err) => {
+    fs.writeFile("READMETest.md", readmeTemplate, (err) => {
       if (err) {
         console.error("Error writing README file:", err);
       } else {
