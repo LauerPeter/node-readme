@@ -1,66 +1,72 @@
+
+
 const generateReadme = (userResponses) => {
-  //const to set user responses
   const {
     projectName,
     description,
+    features,
     usage,
-    contribution,
-    userInstructions,
-    testInstruction,
+    technologies,
+    installation,
+    license,
     github,
     email,
-    license,
+    links,
+    screenshot,
+    contact,
   } = userResponses;
 
+  // Create GitHub and Email links
+  const githubLink = `[GitHub Profile](https://github.com/${github})`;
+  const emailLink = `[Email](mailto:${email})`;
 
-  ///cant comment below return for somereason.... read me template below
+  // Generate license badge based on the selected license
+  const licenseBadge = `![License](https://img.shields.io/badge/License-${encodeURI(
+    license
+  )}-blue.svg)`;
+
   return `
+  # ${projectName}
 
+  ## Description
 
-
-  ##  ${projectName}
-
-  ## Description 
-  
   ${description}
-  
-  ## Table of Contents
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [GitHub](#github)
-  - [Email](#email)
-  
-  ## Installation:
-  
-  ${userInstructions}
-  
-  ## Usage:
-  
+
+  ## Features
+
+  ${features}
+
+  ## Usage
+
   ${usage}
-  
-  ## License:
-  
-  ${license}
-  
-  ## Contributing:
-  
-  ${contribution}
-  
-  ## Tests:
-  
-  ${testInstruction}
-  
-  ## GitHub:
-  
-  ${github}
-  
-  ## Email:
-  
-  ${email}
+
+  ## Technologies
+
+  ${technologies}
+
+  ## Installation
+
+  ${installation}
+
+  ## License
+
+  ${licenseBadge}
+
+  This project is licensed under the [${license}](LICENSE.txt) license.
+
+  ## Links
+
+  ${links}
+
+  ## Screenshot
+
+  ![Screenshot](screenshot.png)
+
+  ## Contact
+
+  - GitHub: ${githubLink}
+  - Email: ${emailLink}
   `;
 };
-////exports the template 
+
 module.exports = generateReadme;
